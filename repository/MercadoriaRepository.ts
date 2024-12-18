@@ -8,6 +8,7 @@ export interface MercadoriaRepository{
 	atualizar(mercadoria: Mercadoria): void;
 	deletar(codigo: number): void;
 
-    entrega(codigo: number,nomeEntregador: string): void;
+    estoque(codigo: number,quantidade: number): void;
+    listarEstoque(): void;
 
 }

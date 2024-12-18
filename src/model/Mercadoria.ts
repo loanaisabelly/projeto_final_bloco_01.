@@ -2,22 +2,26 @@ import { colors } from "../util/colors";
 
 export abstract class Mercadoria {
 
-    private _codig: number;
+    private _codigo: number;
     private _nome: string;
     private _tipo: number;
     private _preco: number;
+    static codigo: number;
+    static cadastrar: any;
+    estoque: number = 0;
+    
 
 
-	constructor(codig: number, nome: string, tipo: number, preco: number) {
-		this._codig = codig;
+	constructor(codigo: number, nome: string, tipo: number, preco: number) {
+		this._codigo = codigo;
 		this._nome = nome;
 		this._tipo = tipo;
 		this._preco = preco;
 	}
 
 
-	public get codig(): number {
-		return this._codig;
+	public get codigo(): number {
+		return this._codigo;
 	}
 
    
@@ -36,8 +40,8 @@ export abstract class Mercadoria {
 	}
 
    
-	public set codig(value: number) {
-		this._codig = value;
+	public set codigo(value: number) {
+		this._codigo = value;
 	}
 
    
@@ -77,7 +81,7 @@ export abstract class Mercadoria {
         "\n\n**************************************************");
         console.log("         Dados do da Mercadoria:          ");
         console.log("******************************************");
-        console.log("Codigo: " + this._codig);
+        console.log("Codigo: " + this._codigo);
         console.log("Nome: " + this._nome);
         console.log("Tipo: " + tipo);
         console.log("Preço: R$ " + this._preco.toFixed(2));

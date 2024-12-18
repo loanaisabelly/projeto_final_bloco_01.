@@ -2,27 +2,27 @@ import { Mercadoria } from "./Mercadoria";
 
 export class Produto extends Mercadoria{
 
-private _NomeProduto: string;
+private _marca: string;
 
 
-constructor(codigo:number, nome: string, tipo: number, preco: number, NomeProduto: string) {
+constructor(codigo:number, nome: string, tipo: number, preco: number, marca: string) {
     super(codigo, nome, tipo,preco);
-    this._NomeProduto = NomeProduto;
+    this._marca = marca;
 }
 
 
     
-	public get NomeProduto(): string {
-		return this._NomeProduto;
+	public get marca(): string {
+		return this._marca;
 	}
 
-	public set NomeProduto(value: string) {
-		this._NomeProduto = value;
+	public set marca(value: string) {
+		this._marca = value;
 	}
 
     public visualizar(): void {
         super.visualizar();
-        console.log("Nome do Produto: " + this._NomeProduto);
+        console.log("Nome do Produto: " + this._marca);
     }
 
 
